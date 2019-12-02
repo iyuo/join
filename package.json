@@ -1,0 +1,59 @@
+{
+    "name": "@iyuo/namespace",
+    "version": "1.3.2",
+    "description": "The TypeScript plugin Namespace for @iyuo/context ecosystem.",
+    "author": "lopatnov",
+    "license": "Apache-2.0",
+    "homepage": "https://iyuo.github.io/context/",
+    "umdName": "iyuo",
+    "source": "src/namespace.ts",
+    "main": "dist/namespace.js",
+    "main_min": "dist/namespace.min.js",
+    "module": "dist/namespace.es.js",
+    "types": "dist/namespace.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/iyuo/context.git"
+    },
+    "bugs": {
+        "url": "https://github.com/iyuo/context/issues"
+    },
+    "keywords": [
+        "context",
+        "typescript",
+        "namespace"
+    ],
+    "scripts": {
+        "build": "rollup -c rollup.config.ts && typedoc --out docs --target es6 --theme minimal --mode file src",
+        "watch": "rollup -c rollup.config.ts -w",
+        "test": "jest",
+        "prepare": "npm i --no-save --no-package-lock @iyuo/context",
+        "publish-npm": "node ./publish-gpr.js -s https://registry.npmjs.org",
+        "publish-gpr": "node ./publish-gpr.js -s https://npm.pkg.github.com"
+    },
+    "files": [
+        "dist"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "devDependencies": {
+        "@types/jest": "^24.0.19",
+        "@types/node": "^12.11.7",
+        "fs": "0.0.1-security",
+        "jest": "^24.9.0",
+        "jest-config": "^24.9.0",
+        "rollup": "^1.25.2",
+        "rollup-plugin-commonjs": "^10.1.0",
+        "rollup-plugin-json": "^4.0.0",
+        "rollup-plugin-node-resolve": "^5.2.0",
+        "rollup-plugin-typescript2": "^0.25.2",
+        "rollup-plugin-uglify": "^6.0.3",
+        "ts-jest": "^24.2.0",
+        "typedoc": "^0.15.0",
+        "typescript": "^3.6.4"
+    },
+    "peerDependencies": {
+        "@iyuo/context": "^1.3.2"
+    }
+}
