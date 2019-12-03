@@ -27,7 +27,7 @@ npm install @iyuo/join
 TypeScript:
 
 ```typescript
-import { join, ns } from "@iyuo/join";
+import { join } from "@iyuo/join";
 ```
 
 or JavaScript:
@@ -44,36 +44,12 @@ Link: [https://iyuo.github.io/join/docs/index.html](https://iyuo.github.io/join/
 # Plugin Sample
 
 ```ts
-let obj: any = {};
-new Context(obj)
-.task(ns("uno.dos.tres"))
-.task(ns("quatro.cinco.seis"));
-
-console.log(obj);
-```
-
-# Function Sample
-
-```ts
-let obj: any = {};
-join.call(obj, "uno.dos.tres"); // new Context(obj).task(ns("uno.dos.tres"))
-join.call(obj, "quatro.cinco.seis"); // .task(ns("quatro.cinco.seis"));
-
-console.log(obj);
-```
-
-```ts
-let obj: any = {};
-let c = new Context(obj);
-c.map(join, "uno.dos.tres")
- .map(join, "quatro.cinco.seis");
-
-console.log(obj.uno.dos.tres.quatro.cinco.seis);
+//TBD
 ```
 
 # Demo
 
-See, how it's working: [https://runkit.com/lopatnov/join-demo-1-3-2](https://runkit.com/lopatnov/join-demo-1-3-2)
+See, how it's working: [https://runkit.com/lopatnov/join-demo](https://runkit.com/lopatnov/join-demo)
 
 Test it with a runkit: [https://npm.runkit.com/@iyuo/join](https://npm.runkit.com/@iyuo/join)
 
