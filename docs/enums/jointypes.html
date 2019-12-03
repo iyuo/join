@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Namespace | @iyuo/namespace</title>
+	<title>JoinTypes | @iyuo/join</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
@@ -2342,7 +2342,7 @@ img {
 		<div class="container">
 			<div class="table-wrap">
 				<div class="table-cell">
-					<strong><a href="../index.html">@iyuo/namespace</a></strong>
+					<strong><a href="../index.html">@iyuo/join</a></strong>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -2372,25 +2372,67 @@ img {
 </header>
 <nav class="tsd-navigation secondary">
 	<ul>
-		<li class="current tsd-kind-class">
-			<a href="namespace.html" class="tsd-kind-icon">Namespace</a>
+		<li class="current tsd-kind-enum">
+			<a href="jointypes.html" class="tsd-kind-icon">Join<wbr>Types</a>
 			<ul>
-				<li class=" tsd-kind-constructor tsd-parent-kind-class">
-					<a href="namespace.html#constructor" class="tsd-kind-icon">constructor</a>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="jointypes.html#fulljoin" class="tsd-kind-icon">full<wbr>Join</a>
 				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-class">
-					<a href="namespace.html#name" class="tsd-kind-icon">name</a>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="jointypes.html#innerjoin" class="tsd-kind-icon">inner<wbr>Join</a>
 				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class">
-					<a href="namespace.html#init" class="tsd-kind-icon">init</a>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="jointypes.html#left" class="tsd-kind-icon">left</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="jointypes.html#leftjoin" class="tsd-kind-icon">left<wbr>Join</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="jointypes.html#midleft" class="tsd-kind-icon">mid<wbr>Left</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="jointypes.html#midmerge" class="tsd-kind-icon">mid<wbr>Merge</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="jointypes.html#midright" class="tsd-kind-icon">mid<wbr>Right</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="jointypes.html#none" class="tsd-kind-icon">none</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="jointypes.html#right" class="tsd-kind-icon">right</a>
+				</li>
+				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+					<a href="jointypes.html#rightjoin" class="tsd-kind-icon">right<wbr>Join</a>
 				</li>
 			</ul>
 		</li>
-		<li class=" tsd-kind-variable">
-			<a href="../globals.html#ns" class="tsd-kind-icon">ns</a>
+		<li class=" tsd-kind-function tsd-is-not-exported">
+			<a href="../globals.html#attach" class="tsd-kind-icon">attach</a>
 		</li>
-		<li class=" tsd-kind-function">
-			<a href="../globals.html#namespace" class="tsd-kind-icon">namespace</a>
+		<li class=" tsd-kind-function tsd-is-not-exported">
+			<a href="../globals.html#clearnames" class="tsd-kind-icon">clear<wbr>Names</a>
+		</li>
+		<li class=" tsd-kind-function tsd-is-not-exported">
+			<a href="../globals.html#extend" class="tsd-kind-icon">extend</a>
+		</li>
+		<li class=" tsd-kind-function tsd-is-not-exported">
+			<a href="../globals.html#getpartnames" class="tsd-kind-icon">get<wbr>Part<wbr>Names</a>
+		</li>
+		<li class=" tsd-kind-function tsd-is-not-exported">
+			<a href="../globals.html#isfunction" class="tsd-kind-icon">is<wbr>Function</a>
+		</li>
+		<li class=" tsd-kind-function tsd-is-not-exported">
+			<a href="../globals.html#isplainobject" class="tsd-kind-icon">is<wbr>Plain<wbr>Object</a>
+		</li>
+		<li class=" tsd-kind-function tsd-has-type-parameter">
+			<a href="../globals.html#join" class="tsd-kind-icon">join</a>
+		</li>
+		<li class=" tsd-kind-function tsd-has-type-parameter tsd-is-not-exported">
+			<a href="../globals.html#joinsource" class="tsd-kind-icon">join<wbr>Source</a>
+		</li>
+		<li class=" tsd-kind-function tsd-is-not-exported">
+			<a href="../globals.html#mergeobjects" class="tsd-kind-icon">merge<wbr>Objects</a>
 		</li>
 	</ul>
 </nav>
@@ -2399,105 +2441,133 @@ img {
 		<section class="tsd-panel tsd-comment">
 			<div class="tsd-comment tsd-typography">
 				<div class="lead">
-					<p>Namespace class</p>
+					<p>Join Types</p>
 				</div>
 			</div>
-		</section>
-		<section class="tsd-panel tsd-hierarchy">
-			<h3>Hierarchy</h3>
-			<ul class="tsd-hierarchy">
-				<li>
-					<span class="target">Namespace</span>
-				</li>
-			</ul>
 		</section>
 		<section class="tsd-panel-group tsd-index-group">
 			<h2>Index</h2>
 			<section class="tsd-panel tsd-index-panel">
 				<div class="tsd-index-content">
 					<section class="tsd-index-section ">
-						<h3>Constructors</h3>
+						<h3>Enumeration members</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="namespace.html#constructor" class="tsd-kind-icon">constructor</a></li>
-						</ul>
-					</section>
-					<section class="tsd-index-section ">
-						<h3>Properties</h3>
-						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-class"><a href="namespace.html#name" class="tsd-kind-icon">name</a></li>
-						</ul>
-					</section>
-					<section class="tsd-index-section ">
-						<h3>Methods</h3>
-						<ul class="tsd-index-list">
-							<li class="tsd-kind-method tsd-parent-kind-class"><a href="namespace.html#init" class="tsd-kind-icon">init</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="jointypes.html#fulljoin" class="tsd-kind-icon">full<wbr>Join</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="jointypes.html#innerjoin" class="tsd-kind-icon">inner<wbr>Join</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="jointypes.html#left" class="tsd-kind-icon">left</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="jointypes.html#leftjoin" class="tsd-kind-icon">left<wbr>Join</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="jointypes.html#midleft" class="tsd-kind-icon">mid<wbr>Left</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="jointypes.html#midmerge" class="tsd-kind-icon">mid<wbr>Merge</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="jointypes.html#midright" class="tsd-kind-icon">mid<wbr>Right</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="jointypes.html#none" class="tsd-kind-icon">none</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="jointypes.html#right" class="tsd-kind-icon">right</a></li>
+							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="jointypes.html#rightjoin" class="tsd-kind-icon">right<wbr>Join</a></li>
 						</ul>
 					</section>
 				</div>
 			</section>
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
-			<h2>Constructors</h2>
-			<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
-				<a name="constructor" class="tsd-anchor"></a>
-				<h3>constructor</h3>
-				<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-					<li class="tsd-signature tsd-kind-icon">new <wbr>Namespace<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="namespace.html" class="tsd-signature-type">Namespace</a></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/iyuo/namespace/blob/7090850/src/namespace.ts#L7">src/namespace.ts:7</a></li>
-							</ul>
-						</aside>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>name: <span class="tsd-signature-type">string</span></h5>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <a href="namespace.html" class="tsd-signature-type">Namespace</a></h4>
-					</li>
-				</ul>
-			</section>
-		</section>
-		<section class="tsd-panel-group tsd-member-group ">
-			<h2>Properties</h2>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-				<a name="name" class="tsd-anchor"></a>
-				<h3>name</h3>
-				<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+			<h2>Enumeration members</h2>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="fulljoin" class="tsd-anchor"></a>
+				<h3>full<wbr>Join</h3>
+				<div class="tsd-signature tsd-kind-icon">full<wbr>Join<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;left | midMerge | right</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/iyuo/namespace/blob/7090850/src/namespace.ts#L7">src/namespace.ts:7</a></li>
+						<li>Defined in join.ts:16</li>
 					</ul>
 				</aside>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>The name of the namespace</p>
-					</div>
-				</div>
 			</section>
-		</section>
-		<section class="tsd-panel-group tsd-member-group ">
-			<h2>Methods</h2>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-				<a name="init" class="tsd-anchor"></a>
-				<h3>init</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-					<li class="tsd-signature tsd-kind-icon">init<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/iyuo/namespace/blob/7090850/src/namespace.ts#L13">src/namespace.ts:13</a></li>
-							</ul>
-						</aside>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-					</li>
-				</ul>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="innerjoin" class="tsd-anchor"></a>
+				<h3>inner<wbr>Join</h3>
+				<div class="tsd-signature tsd-kind-icon">inner<wbr>Join<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;none | midMerge | none</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in join.ts:13</li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="left" class="tsd-anchor"></a>
+				<h3>left</h3>
+				<div class="tsd-signature tsd-kind-icon">left<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;8</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in join.ts:8</li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="leftjoin" class="tsd-anchor"></a>
+				<h3>left<wbr>Join</h3>
+				<div class="tsd-signature tsd-kind-icon">left<wbr>Join<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;left | midMerge | none</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in join.ts:14</li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="midleft" class="tsd-anchor"></a>
+				<h3>mid<wbr>Left</h3>
+				<div class="tsd-signature tsd-kind-icon">mid<wbr>Left<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;4</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in join.ts:10</li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="midmerge" class="tsd-anchor"></a>
+				<h3>mid<wbr>Merge</h3>
+				<div class="tsd-signature tsd-kind-icon">mid<wbr>Merge<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;midLeft | midRight</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in join.ts:12</li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="midright" class="tsd-anchor"></a>
+				<h3>mid<wbr>Right</h3>
+				<div class="tsd-signature tsd-kind-icon">mid<wbr>Right<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;2</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in join.ts:11</li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="none" class="tsd-anchor"></a>
+				<h3>none</h3>
+				<div class="tsd-signature tsd-kind-icon">none<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;0</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in join.ts:7</li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="right" class="tsd-anchor"></a>
+				<h3>right</h3>
+				<div class="tsd-signature tsd-kind-icon">right<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;1</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in join.ts:9</li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+				<a name="rightjoin" class="tsd-anchor"></a>
+				<h3>right<wbr>Join</h3>
+				<div class="tsd-signature tsd-kind-icon">right<wbr>Join<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;none | midMerge | right</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in join.ts:15</li>
+					</ul>
+				</aside>
 			</section>
 		</section>
 		<footer class="with-border-bottom">
