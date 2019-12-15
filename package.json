@@ -1,6 +1,6 @@
 {
     "name": "@iyuo/join",
-    "version": "1.3.2",
+    "version": "1.3.3",
     "description": "The TypeScript plugin join for @iyuo/context ecosystem. Object join technics.",
     "author": "lopatnov",
     "license": "Apache-2.0",
