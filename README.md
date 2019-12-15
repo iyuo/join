@@ -6,6 +6,14 @@
 
 The TypeScript plugin join for [@iyuo/context](https://iyuo.github.io/context/) ecosystem. Object join technics.
 
+# Requirements
+
+Install [@iyuo/context](https://iyuo.github.io/context/).
+
+```shell
+npm install @iyuo/context
+```
+
 # Install
 
 Node:
