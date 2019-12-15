@@ -42,7 +42,6 @@ jobs:
           node-version: '12.x'
           registry-url: 'https://npm.pkg.github.com'
           scope: '@lopatnov'
-      - run: npm ci
       - run: npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GPR_PAT }}
