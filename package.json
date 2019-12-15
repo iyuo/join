@@ -1,6 +1,6 @@
 {
     "name": "@iyuo/join",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "The TypeScript plugin join for @iyuo/context ecosystem. Object join technics.",
     "author": "lopatnov",
     "license": "Apache-2.0",
@@ -28,8 +28,8 @@
         "watch": "rollup -c rollup.config.ts -w",
         "test": "jest",
         "prepare": "npm i --no-save --no-package-lock @iyuo/context",
-        "publish-npm": "node ./publish-gpr.js -s https://registry.npmjs.org",
-        "publish-gpr": "node ./publish-gpr.js -s https://npm.pkg.github.com"
+        "config-npm": "node ./config-repo.js -s https://registry.npmjs.org",
+        "config-gpr": "node ./config-repo.js -s https://npm.pkg.github.com"
     },
     "files": [
         "dist"
@@ -38,17 +38,21 @@
         "access": "public"
     },
     "devDependencies": {
+        "@lopatnov/rollup-plugin-uglify": "^1.2.1",
         "@types/jest": "^24.0.19",
         "@types/node": "^12.11.7",
+        "@typescript-eslint/eslint-plugin": "^2.11.0",
+        "@typescript-eslint/parser": "^2.11.0",
+        "eslint": "^6.7.2",
         "fs": "0.0.1-security",
         "jest": "^24.9.0",
         "jest-config": "^24.9.0",
-        "rollup": "^1.25.2",
+        "rollup": "^1.27.13",
         "rollup-plugin-commonjs": "^10.1.0",
         "rollup-plugin-json": "^4.0.0",
         "rollup-plugin-node-resolve": "^5.2.0",
         "rollup-plugin-typescript2": "^0.25.2",
-        "rollup-plugin-uglify": "^6.0.3",
+        "terser": "^4.4.2",
         "ts-jest": "^24.2.0",
         "typedoc": "^0.15.0",
         "typescript": "^3.6.4"

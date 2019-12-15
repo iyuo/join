@@ -2437,7 +2437,146 @@ img {
 			<a href="#plugin-sample" id="plugin-sample" style="color: inherit; text-decoration: none;">
 				<h1>Plugin Sample</h1>
 			</a>
-			<pre><code class="language-ts"><span class="hljs-comment">//TBD</span></code></pre>
+			<a href="#left-part" id="left-part" style="color: inherit; text-decoration: none;">
+				<h2>Left part</h2>
+			</a>
+			<pre><code class="language-ts"><span class="hljs-keyword">var</span> c = <span class="hljs-keyword">new</span> Context({
+  sample1: <span class="hljs-string">"One"</span>,
+  sample2: <span class="hljs-string">"Two"</span>,
+  sample3: <span class="hljs-string">"Three"</span>
+}).make(
+  join(JoinTypes.left, {
+    sample2: <span class="hljs-string">"Dos"</span>,
+    sample3: <span class="hljs-string">"Tres"</span>,
+    sample4: <span class="hljs-string">"Quatro"</span>
+  })
+);
+
+<span class="hljs-built_in">console</span>.log(c);
+<span class="hljs-comment">/*
+expect(c.sample1).toBe("One");
+expect(c.sample2).not.toBeDefined();
+expect(c.sample3).not.toBeDefined();
+expect(c.sample4).not.toBeDefined();
+*/</span></code></pre>
+			<a href="#right-part" id="right-part" style="color: inherit; text-decoration: none;">
+				<h2>Right part</h2>
+			</a>
+			<pre><code class="language-ts"><span class="hljs-keyword">var</span> c = <span class="hljs-keyword">new</span> Context({
+  sample1: <span class="hljs-string">"One"</span>,
+  sample2: <span class="hljs-string">"Two"</span>,
+  sample3: <span class="hljs-string">"Three"</span>
+}).make(
+  join(JoinTypes.right, {
+    sample2: <span class="hljs-string">"Dos"</span>,
+    sample3: <span class="hljs-string">"Tres"</span>,
+    sample4: <span class="hljs-string">"Quatro"</span>
+  })
+);
+
+<span class="hljs-built_in">console</span>.log(c);
+<span class="hljs-comment">/*
+expect(c.sample1).not.toBeDefined();
+expect(c.sample2).not.toBeDefined();
+expect(c.sample3).not.toBeDefined();
+expect(c.sample4).toBe("Quatro");
+*/</span></code></pre>
+			<a href="#middle-part" id="middle-part" style="color: inherit; text-decoration: none;">
+				<h2>Middle part</h2>
+			</a>
+			<a href="#middle-none" id="middle-none" style="color: inherit; text-decoration: none;">
+				<h3>Middle none</h3>
+			</a>
+			<pre><code class="language-ts"><span class="hljs-keyword">var</span> c = <span class="hljs-keyword">new</span> Context({
+  sample1: <span class="hljs-string">"One"</span>,
+  sample2: <span class="hljs-string">"Two"</span>,
+  sample3: <span class="hljs-string">"Three"</span>
+}).make(
+  join(JoinTypes.left | JoinTypes.right, {
+    sample2: <span class="hljs-string">"Dos"</span>,
+    sample3: <span class="hljs-string">"Tres"</span>,
+    sample4: <span class="hljs-string">"Quatro"</span>
+  })
+);
+
+<span class="hljs-built_in">console</span>.log(c);
+<span class="hljs-comment">/*
+expect(c.sample1).toBe("One");
+expect(c.sample2).not.toBeDefined();
+expect(c.sample3).not.toBeDefined();
+expect(c.sample4).toBe("Quatro");
+*/</span></code></pre>
+			<a href="#middle-from-left-object" id="middle-from-left-object" style="color: inherit; text-decoration: none;">
+				<h3>Middle from left object</h3>
+			</a>
+			<pre><code class="language-ts"><span class="hljs-keyword">var</span> c = <span class="hljs-keyword">new</span> Context({
+  sample1: <span class="hljs-string">"One"</span>,
+  sample2: <span class="hljs-string">"Two"</span>,
+  sample3: <span class="hljs-string">"Three"</span>
+}).make(
+  join(JoinTypes.midLeft, {
+    sample2: <span class="hljs-string">"Dos"</span>,
+    sample3: <span class="hljs-string">"Tres"</span>,
+    sample4: <span class="hljs-string">"Quatro"</span>
+  })
+);
+
+<span class="hljs-built_in">console</span>.log(c);
+<span class="hljs-comment">/*
+expect(c.sample1).not.toBeDefined();
+expect(c.sample2).toBe("Two");
+expect(c.sample3).toBe("Three");
+expect(c.sample4).not.toBeDefined();
+*/</span></code></pre>
+			<a href="#middle-from-right-object" id="middle-from-right-object" style="color: inherit; text-decoration: none;">
+				<h3>Middle from right object</h3>
+			</a>
+			<pre><code class="language-ts"><span class="hljs-keyword">var</span> c = <span class="hljs-keyword">new</span> Context({
+  sample1: <span class="hljs-string">"One"</span>,
+  sample2: <span class="hljs-string">"Two"</span>,
+  sample3: <span class="hljs-string">"Three"</span>
+}).make(
+  join(JoinTypes.midRight, {
+    sample2: <span class="hljs-string">"Dos"</span>,
+    sample3: <span class="hljs-string">"Tres"</span>,
+    sample4: <span class="hljs-string">"Quatro"</span>
+  })
+);
+
+<span class="hljs-built_in">console</span>.log(c);
+<span class="hljs-comment">/*
+expect(c.sample1).not.toBeDefined();
+expect(c.sample2).toBe("Dos");
+expect(c.sample3).toBe("Tres");
+expect(c.sample4).not.toBeDefined();
+*/</span></code></pre>
+			<a href="#middle-merge" id="middle-merge" style="color: inherit; text-decoration: none;">
+				<h3>Middle merge</h3>
+			</a>
+			<pre><code class="language-ts"><span class="hljs-keyword">var</span> c = <span class="hljs-keyword">new</span> Context({
+  sample1: <span class="hljs-string">"One"</span>,
+  sample2: <span class="hljs-string">"Two"</span>,
+  sample3: {
+    smile: <span class="hljs-string">"cheese"</span>
+  }
+}).make(
+  join(JoinTypes.midMerge, {
+    sample2: <span class="hljs-string">"Dos"</span>,
+    sample3: {
+      sorrir: <span class="hljs-string">"queijo"</span>
+    },
+    sample4: <span class="hljs-string">"Quatro"</span>
+  })
+);
+
+<span class="hljs-built_in">console</span>.log(c);
+<span class="hljs-comment">/*
+expect(c.sample1).not.toBeDefined();
+expect(c.sample2).toBe("Dos");
+expect(c.sample3.smile).toBe("cheese");
+expect(c.sample3.sorrir).toBe("queijo");
+expect(c.sample4).not.toBeDefined();
+*/</span></code></pre>
 			<a href="#demo" id="demo" style="color: inherit; text-decoration: none;">
 				<h1>Demo</h1>
 			</a>
