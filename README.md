@@ -194,6 +194,40 @@ expect(c.sample4).not.toBeDefined();
 */
 ```
 
+## Combined joins
+
+- innerJoin = none | midMerge | none,
+- leftJoin = left | midMerge | none,
+- rightJoin = none | midMerge | right,
+- fullJoin = left | midMerge | right
+
+```ts
+var c = new Context({
+  sample1: "One",
+  sample2: "Two",
+  sample3: {
+    smile: "cheese"
+  }
+}).make(
+  join(JoinTypes.innerJoin, {
+    sample2: "Dos",
+    sample3: {
+      sorrir: "queijo"
+    },
+    sample4: "Quatro"
+  })
+);
+
+console.log(c);
+/*
+expect(c.sample1).not.toBeDefined();
+expect(c.sample2).toBe("Dos");
+expect(c.sample3.smile).toBe("cheese");
+expect(c.sample3.sorrir).toBe("queijo");
+expect(c.sample4).not.toBeDefined();
+*/
+```
+
 # Demo
 
 See, how it's working: [https://runkit.com/lopatnov/join-demo](https://runkit.com/lopatnov/join-demo)
