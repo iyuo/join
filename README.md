@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/github/license/iyuo/join)](https://github.com/iyuo/join/blob/master/LICENSE)
 [![Twitter](https://img.shields.io/twitter/url?url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fjoin)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fjoin)
 
-The TypeScript plugin join for [@iyuo/context](https://iyuo.github.io/context/) ecosystem.
+The TypeScript plugin join for [@iyuo/context](https://iyuo.github.io/context/) ecosystem. Object join technics.
 
 # Install
 
