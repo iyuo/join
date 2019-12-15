@@ -204,10 +204,12 @@ expect(c.sample4).not.toBeDefined();
 
 ## Combined joins
 
-- innerJoin = none | midMerge | none,
-- leftJoin = left | midMerge | none,
-- rightJoin = none | midMerge | right,
-- fullJoin = left | midMerge | right
+```
+— innerJoin = none | midMerge | none,
+— leftJoin = left | midMerge | none,
+— rightJoin = none | midMerge | right,
+— fullJoin = left | midMerge | right
+```
 
 ```ts
 var c = new Context({
